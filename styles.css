@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #001d37;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0b1f3a, #1b3a8a, #6c2bd9);
+  padding: 60px;
+  padding-bottom: 150px;
+  position: relative;
+  color: white;
+}
+
+.hero-content {
+  max-width: 350px;
+  padding-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero button:first-child {
+  background: #6c63ff;
+  color: white;
+}
+
+.hero button:last-child {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* FEATURES */
+.features {
+  position: absolute;
+  bottom: -70px;
+  left: 60px;
+  right: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.feature h4 {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.feature h4::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #fff;
+}
+
+/* ICONS */
+.icon-sun::before {
+  content: "\f185";
+}
+
+.icon-heart::before {
+  content: "\f598";
+}
+
+.icon-trophy::before {
+  content: "\f091";
+}
+
+.icon-moon::before {
+  content: "\f186";
+}
+
+/* FRIENDS */
+.friends {
+  background: white;
+  padding: 120px 50px 50px;
+}
+
+.friends h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* FILTER */
+.filter {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.filter span {
+  opacity: 0.6;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  position: relative;
+}
+
+.filter-btn.active {
+  color: #6c63ff;
+}
+
+.filter-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #6c63ff;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card-content h5 {
+  font-size: 10px;
+  opacity: 0.3;
+  margin-top: 10px;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple glow circle (right) */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -200px;
+  top: -100px;
+  background: radial-gradient(
+    circle,
+    rgba(173, 91, 255, 0.9),
+    rgba(173, 91, 255, 0.4),
+    transparent 70%
+  );
+  filter: blur(40px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Blue glow circle (left) */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -150px;
+  top: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(76, 110, 245, 0.9),
+    rgba(76, 110, 245, 0.4),
+    transparent 70%
+  );
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+}
